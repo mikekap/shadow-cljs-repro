@@ -1,0 +1,20 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ []
+
+ :dev-http {8080 "."}
+ :builds
+ {:main {:target :browser
+         :release {:output-dir "out"
+                   :module-loader-init false}
+         :module-loader true
+         :source-map true
+         :compiler-options {:source-map true
+                            :source-map-include-sources-content false}
+         :modules {:main {:entries [repro.main]
+                          :init-fn repro.main/run}}}}}
