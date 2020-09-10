@@ -15,6 +15,7 @@
          :module-loader true
          :source-map true
          :compiler-options {:source-map true
-                            :source-map-include-sources-content false}
+                            :source-map-include-sources-content false
+                            :optimizations :advanced}
          :modules {:main {:entries [repro.main]
                           :init-fn repro.main/run}}}}}
